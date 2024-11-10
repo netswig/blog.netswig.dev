@@ -1,4 +1,4 @@
-site_name: netswig blog
+site_name: Netswig
 site_description: A blog about all things, but mostly networking and automation.
 site_url: https://blog.netswig.dev
 repo_name: netswig/blog.netswig.dev
@@ -6,14 +6,14 @@ repo_url: https://github.com/netswig/blog.netswig.dev.git
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/jvanderaa
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/josh-vanderaa/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/vanderaaj
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@jvanderaa
+#    - icon: fontawesome/brands/github
+#      link: https://github.com/xxx
+#    - icon: fontawesome/brands/linkedin
+#      link: https://www.linkedin.com/in/xxx
+#    - icon: fontawesome/brands/twitter
+#      link: https://twitter.com/xxx
+#    - icon: fontawesome/brands/mastodon
+#      link: https://fosstodon.org/@xxx
 
 theme:
   name: material
