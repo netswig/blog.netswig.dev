@@ -1,0 +1,98 @@
+site_name: netswig blog
+site_description: A blog about all things, but mostly networking and automation.
+site_url: https://blog.netswig.dev
+repo_name: netswig/blog.netswig.dev
+repo_url: https://github.com/netswig/blog.netswig.dev.git
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jvanderaa
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/josh-vanderaa/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/vanderaaj
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@jvanderaa
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+    - content.action.view
+    - content.tabs.link
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+
+  palette:
+    - accent: deep orange
+      primary: indigo
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - accent: deep orange
+      primary: black
+      scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - neoteroi.timeline
+  - pymdownx.details
+  - pymdownx.emoji:
+#      emoji_index: !!python/name:material.extensions.emoji.twemoji
+#      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      social_url_shorthand: true
+      repo_url_shortener: true
+      user: true
+      repo: true
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: "#"
+plugins:
+  - blog:
+      blog_dir: .
+      post_url_format: "{slug}"
+      blog_toc: true
+      categories_toc: false
+      archive_name: "📚 Posts"
+      categories_name: "🏷️ Categories"
+      pagination_per_page: 8
+  - glightbox
+  - rss:
+      match_path: posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+      comments_path: "#__comments"
+  - search:
+      lang: en
+  - tags:
+      tags_file: tags.md
