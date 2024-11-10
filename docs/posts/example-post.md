@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2023-11-10
+  created: 2024-11-10
 categories:
     - Testing Documents
 tags: 
@@ -10,7 +10,7 @@ draft: true
 
 # Example Post
 
-This is my first post using MKDocs Material, so I very much still learning. 
+This is my first post using MKDocs Material.
 <!-- more -->
 
-I hope this blog will become a hub and record for all my learning and knowledge.
+This is some more text.
