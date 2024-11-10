@@ -10,22 +10,19 @@ draft: false
 
 # Cisco IOS - Working With Text Files
 
-## The Problem
 Generally when working with a Cisco device's text configuration files, the files are copied to the device using methods like SCP,FTP or TFTP. 
 
 However many times I have found myself in a situation where I do not have a server available to me to copy files to/from. 
 
 Its also common I cannot create a server due to security restraints or having no available compute resources.
 
-Below are some useful tricks to get around this problem.
+Its also sometimes quicker to create a configuration file on a device instead of copying via other methods.
 
 <!-- more -->
 
 ## Reading Files
 
 The `more` command can be used to output the contents of a text file to the console. This is useful for reading any files already stored on a devices flash. 
-
-### Example
 
 ```cisco title="Using the 'more' command"
 hq-ios-nr-01#more flash:config-backup.ios           
@@ -60,8 +57,6 @@ line vty 0 4
 
 For devices which do not have any container or linux guest shell capabilities you can use the TCL shell to create files.
 
-### Example
-
 ```cisco title="Creating new config file using TCL Shell"
 hq-ios-nr-01(tcl)#puts [open "flash:config-new.ios" w+] {
 +>version 15.6
@@ -77,3 +72,7 @@ hq-ios-nr-01(tcl)#puts [open "flash:config-new.ios" w+] {
 +>}
 hq-ios-nr-01(tcl)#tclquit
 ```
+
+## Summary
+
+The above commands are available on almost all Cisco IOS devices, so hopefully this can save you some time in the future. The above methods are particularly useful when working with automatic configuration archives and the `config replace` command for device configuration rollbacks.
