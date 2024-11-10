@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-glightbox neoteroi-mkdocs
+          pip install mkdocs mkdocs-material mkdocs-material-extensions mkdocs-glightbox neoteroi-mkdocs mkdocs-rss-plugin
 
       - name: Build MkDocs site
         run: |
